@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "angular2": "2.0.0-beta.15",
+    "rxjs": "5.0.0-beta.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "zone.js": "^0.6.6",
+    "ng2-bootstrap": "1.0.13"
+  },
+  "description": "Toolkit elements for Variation: alerts",
+  "devDependencies": {
+    "typescript": "^1.7.5"
+  },
+  "license": "MIT",
+  "maintainers": [
+    {
+      "email": "pmartin@actimeo.fr",
+      "name": "Philippe MARTIN"
+    }
+  ],
+  "name": "variation-toolkit",
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actimeo/variation-toolkit.git"
+  },
+  "scripts": {
+    "watch": "tsc -p src -w",
+    "build": "rm -rf lib && tsc -p src"
+  },
+  "version": "0.0.1"
+}
