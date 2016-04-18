@@ -5,7 +5,8 @@
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "zone.js": "0.6.11",
-    "ng2-bootstrap": "1.0.13"
+    "ng2-bootstrap": "1.0.13",
+    "ng2-i18next": "0.0.4"
   },
   "description": "Toolkit elements for Variation: alerts",
   "devDependencies": {
