@@ -10,7 +10,7 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {Alerts} from './alerts';
+import {AlertsComponent} from './alerts-component';
 
 
 describe('Alerts Component', () => {
@@ -19,7 +19,7 @@ describe('Alerts Component', () => {
 
 
   it('should ...', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-       return tcb.createAsync(Alerts).then((fixture) => { fixture.detectChanges(); });
+       return tcb.createAsync(AlertsComponent).then((fixture) => { fixture.detectChanges(); });
      }));
 
 });

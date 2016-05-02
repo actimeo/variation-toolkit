@@ -10,7 +10,7 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide, Component} from 'angular2/core';
-import {FootertipDirective} from './footertip';
+import {FootertipDirective} from './footertip-directive';
 
 
 @Component({selector: 'test-component', template: `<div footertip></div>`})

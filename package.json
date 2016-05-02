@@ -1,16 +1,24 @@
 {
   "dependencies": {
-    "angular2": "2.0.0-beta.15",
+    "angular2": "2.0.0-beta.16",
     "rxjs": "5.0.0-beta.2",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
-    "zone.js": "0.6.11",
-    "ng2-bootstrap": "1.0.13",
+    "zone.js": "0.6.12",
+    "ng2-bootstrap": "1.0.15",
     "ng2-i18next": "0.0.4"
   },
   "description": "Toolkit elements for Variation: alerts",
   "devDependencies": {
-    "typescript": "^1.7.5"
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
+    "remap-istanbul": "^0.6.3",
+    "systemjs": "^0.19.26",
+    "typescript": "^1.8.10"
   },
   "license": "MIT",
   "maintainers": [
@@ -26,8 +34,12 @@
     "url": "git+https://github.com/actimeo/variation-toolkit.git"
   },
   "scripts": {
-    "watch": "tsc -p src -w",
-    "build": "rm -rf lib && tsc -p src"
+    "build": "rm -rf lib && tsc -p src",
+    "start": "http-server -c-1 -o -p 8875 .",
+    "pretest": "npm run build",
+    "test": "karma start karma.conf.js",
+    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
   },
   "version": "0.0.2"
 }

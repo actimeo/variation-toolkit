@@ -1,6 +1,6 @@
 import {Component, OnInit, OnDestroy} from 'angular2/core';
 import {Subscription} from 'rxjs/Subscription';
-import {Alert} from 'ng2-bootstrap/ng2-bootstrap';
+import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
 import {AlertsService, AlertType} from './alerts-service';
 
 const ALERTS_TEMPLATE = `
@@ -16,7 +16,7 @@ const ALERTS_TEMPLATE = `
 @Component({
   selector: 'alerts',
   template: ALERTS_TEMPLATE,
-  directives: [Alert]
+  directives: [AlertComponent]
 })
 export class AlertsComponent implements OnInit, OnDestroy {
   private alerts: AlertType[];

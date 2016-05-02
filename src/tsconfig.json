@@ -9,8 +9,10 @@
 	"sourceMap": true,
 	"outDir": "../lib",
 	"declaration": true
-    },
+    }, 
     "files": [
-	"compile.ts"
+	"compile.ts", 
+	"alerts-service.spec.ts",
+	"footertip.spec.ts"
     ]
 }

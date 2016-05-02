@@ -10,16 +10,24 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
+import {Observable} from 'rxjs/Observable';
 import {Footertip} from './footertip';
+import {FootertipService} from './footertip-service';
 
 
 describe('Footertip Component', () => {
+    
+    class MockFootertipService {
+	public tip$;
+	constructor() {
+	    this.tip$ = Observable.of('& tip');
+	}
+    }
 
-  beforeEachProviders((): any[] => []);
+  beforeEachProviders((): any[] => [Footertip, provide(FootertipService, {useClass: MockFootertipService})]);
 
 
-  it('should ...', injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-       return tcb.createAsync(Footertip).then((fixture) => { fixture.detectChanges(); });
-     }));
+  it('should ...', inject([Footertip], (footerTip) => {
+  }));
 
 });

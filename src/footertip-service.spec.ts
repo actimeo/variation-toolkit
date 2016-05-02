@@ -10,7 +10,7 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {FootertipService} from './footertip';
+import {FootertipService} from './footertip-service';
 
 
 describe('Footertip Service', () => {
@@ -18,9 +18,12 @@ describe('Footertip Service', () => {
   beforeEachProviders(() => [FootertipService]);
 
 
-  it('should ...', inject(
-                       [FootertipService], (service: FootertipService) => {
-
-                                           }));
-
+  it('should ...', injectAsync(
+      [FootertipService], (service: FootertipService) => {
+	  
+	  service.setTip('one tip');
+	  service.tip$.subscribe( updatedTip => 
+				  expect(updatedTip).toEqual('one tip'));
+      }));
+    
 });
